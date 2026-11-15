@@ -1,5 +1,5 @@
 import {siteUrl} from '../site-url.js';
-import { Footer, LazyVideo } from '../components.jsx';
+import { Footer, LazyVideo, ResponsiveBreak } from '../components.jsx';
 const img1 = siteUrl("/assets/figma/77c9fdf4-5c83-486d-9395-2b9286e3951e.webp");
 const img11 = siteUrl("/assets/figma/cceecfd3-9126-4134-b7ca-5ff09c231c38.webp");
 const img21 = siteUrl("/assets/figma/11283b5b-a1d2-49df-b2dd-f544dd0b9908.webp");
@@ -119,7 +119,7 @@ export default function Domclick() {
           <div className="d23" data-node-id="1:6579">
             <p className="d24" data-node-id="1:6580">
               Оплата
-              <br aria-hidden />
+              <ResponsiveBreak/>
               для арендатора
             </p>
             <p className="d25" data-node-id="1:6581">
@@ -136,7 +136,7 @@ export default function Domclick() {
           <div className="d23" data-node-id="1:6585">
             <p className="d24" data-node-id="1:6586">
               Интеграция
-              <br aria-hidden />
+              <ResponsiveBreak/>
               со СберЗвуком
             </p>
             <p className="d25" data-node-id="1:6587">
@@ -144,7 +144,7 @@ export default function Domclick() {
             </p>
             <p className="d25" data-node-id="1:6588">
               Завершение оплаты дополнили коротким звуковым акцентом.
-              <br aria-hidden />
+              <ResponsiveBreak/>
               Он поддерживает момент успеха и связывает его с музыкальным сервисом.
             </p>
           </div>
@@ -163,7 +163,7 @@ export default function Domclick() {
             </div>
             <p className="d65" data-node-id="1:6596">
               Для собственника — переработанное отображение платежей и карточку общего дохода. Для арендатора — обновлённую оплату
-              <br aria-hidden />и экран подтверждения с интеграцией.
+              <ResponsiveBreak/>и экран подтверждения с интеграцией.
             </p>
           </div>
           <div className="d110" data-node-id="1:6597">

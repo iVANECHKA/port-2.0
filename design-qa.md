@@ -1,38 +1,24 @@
-# Scoped annotation verification — final local revision, 13 November 2026
+# Mobile implementation verification — 15 November 2026
 
-Scope: the owner's latest seven annotations and the narrow-screen message. Preserve everything else; no publication or GitHub operations. Previous report and pre-edit source snapshots are under `qa/revision-3/`.
+Scope: restore a responsive mobile version on all four pages, remove the mobile company sidebar, move all mobile header controls into a burger menu, and replace the portfolio logo on every viewport. Desktop's only visible change is the supplied logo.
 
-## Source and visual evidence
+## Evidence
 
-The owner's seven annotated screenshots are the visual source for these scoped changes. Browser checks used 1117 × 887 CSS pixels for desktop, 768 × 1024 for tablet, 767 × 887 for the cutoff, and 390 × 844 for phone. Screenshots are at one image pixel per CSS pixel.
+Owner's existing desktop prototype is the visual baseline. Logo source: `/Users/dashixa/Desktop/site/logo.png`, copied unchanged to `public/assets/logo.png` (228 × 112 PNG with transparency). No media was recompressed.
 
-Evidence: `qa/revision-3/badge-hover.png`, `footer-hover.png`, `income-original.png`, `payment-original.png`, `tablet-768.png`, and `mobile-message.png`. Pre-edit internal-page capture: `domclick-before.png`. Compared the requested targets with the annotations; no surrounding layout changes were introduced.
+Screenshots and observations are under `qa/mobile-2026-11-15/`: desktop-before/after, mobile home/menu, the three complete case pages, narrow-checks.json, boundary-checks.json. Screenshots use one image pixel per CSS pixel.
 
-## Results
+## Verification
 
-1–2. Both shared footer contact links keep their existing text color and now have opacity 0.6 on hover and press, with the header's existing 0.2-second opacity transition. The former blue hover color and 0.65 press opacity are removed. Verified live hover, computed original color, and shared hover/active CSS rule.
+- At 1117 × 887, header, logo slot, hero, greeting, five-card row, case section, company navigation, about section and footer retain exactly the same bounding rectangles before and after implementation. Existing desktop links, copy, colors, spacing, animation rules and case behavior are retained. New mobile controls and mobile line-break spaces are hidden on desktop.
+- All four routes fit a 320 px viewport: document scrollWidth equals innerWidth. Also checked 390, 430 and 767 px; at 768 px desktop/tablet header and company sidebar return.
+- On mobile the company sidebar is absent from layout and accessibility navigation. Logo stays on the left; only the burger is visible on the right. All four controls (About, Cases, Resume, Contacts) are inside the menu.
+- Menu opens/closes, closes after following an anchor or clicking outside, and closes with Escape while returning focus to the toggle. Resize to desktop closes it. Closed navigation is inert and hidden from assistive technology.
+- Mobile case text and images use the available width. Capital result metrics use three readable columns; Gedocorp metrics use two columns without overflow on 320 px screens. Desktop line breaks are retained; mobile replaces them with spaces so words do not merge. Existing horizontal screen galleries remain scrollable.
+- Mobile Domclick and Sber preview playback starts when visible without requiring hover. Verified Domclick videoWidth=2692 and Sber videoWidth=2560, playing with the pointer outside previews. Desktop still starts them on hover/focus, and the existing latched looping and Gedo one-shot rules remain intact.
+- The former Desktop-only message has been removed. Footer Moscow time, contact links, NDA feedback, sounds, delayed greeting and pending-PDF behavior are retained.
+- GitHub Pages base paths and direct case routes remain supported.
 
-3. All four homepage case previews show the cursor badge with width 107 px, height 50 px, Onest Medium (500) at 14 px, background #277EF1 and white text. Computed values match for all four. Styling is explicitly scoped to `.home-page`; no internal-page badge styling is added. Sber keeps its NDA action. Real pointer hover captured; all preview transforms remain none.
+Validation: GitHub Pages production build and existing Sites packaging tests. Browser menu/resize/navigation/overflow checks passed. Publishing is handled by the existing GitHub Pages workflow after source synchronization.
 
-4–7. Copied only the four requested videos byte-for-byte from the owner's original folders. Full SHA-256 comparisons are recorded in `qa/revision-3/media-verification.json`. Browser metadata confirms:
-
-| Requested target | Original resolution |
-| --- | --- |
-| Domclick income card | 2614 × 1720 |
-| Homepage Sber preview | 2560 × 1440 |
-| Homepage Gedo preview | 2692 × 1520 |
-| Domclick payment animation | 3098 × 2040 |
-
-Lossless posters were regenerated from these originals. The preparation script now preserves these originals and the previously restored homepage Domclick MP4, without transcoding them. Other video assets were not replaced. Internal video slots retain their previous 759.227 × 500.320 px geometry at the desktop test viewport. Sber continues playing offscreen; Gedo remains one-shot and reaches ended=true, paused=true, time=2.033333, loop=false. Internal videos still follow viewport playback.
-
-Additional request: below 768 CSS px the portfolio is unmounted and the only visible content is a pure white screen with the exact text “Портфолио работает только на Desktop версии”. At 390 × 844 its main element fills the viewport, uses 18 px text, and has no horizontal overflow or mounted videos. Direct navigation to /domclick also shows only the message. Live resize back to 768 px restores the existing tablet page, with no message or horizontal overflow.
-
-## Preservation and validation
-
-- Only contact states, the homepage badge, and the narrow-screen message selectors changed. No typography, spacing, copy, dates, route, sound, or interaction change outside those requests. Internal page source files and responsive layout rules remain untouched.
-- Four original video files and their posters replaced; input folders untouched. Playback logic unchanged.
-- `npm run build` passed. Media preparation script syntax check passed.
-- Browser console warning/error check: none.
-- No remaining actionable issue within this request. Wider portfolio work and eventual GitHub upload remain separate.
-
-final result: passed (scoped verification)
+final result: passed (scoped mobile and desktop-preservation checks)

@@ -8,7 +8,7 @@ export function installClickSound(){
   const control=event.target.closest('a[href],button');
   return control&&!control.matches(':disabled,[aria-disabled="true"]');
  }
- function sound(){void unlock();play('tap',{theme:'mech',volume:.35})}
+ function sound(){void unlock();play('tap',{theme:'mech',volume:.245})}
  function pointerDown(event){if(event.pointerType==='mouse'&&event.button===0&&interactive(event))sound()}
  function click(event){
   if(interactive(event)&&(event.detail===0||event.pointerType==='touch'||event.pointerType==='pen'))sound();

@@ -1,5 +1,5 @@
 import {siteUrl} from '../site-url.js';
-import { Footer, LazyVideo } from '../components.jsx';
+import { Footer, LazyVideo, ResponsiveBreak } from '../components.jsx';
 const img1 = siteUrl("/assets/figma/7dd59be5-627c-422d-be05-0962eff6b307.webp");
 const imgBody = siteUrl("/assets/figma/1aa36f55-86b2-480b-9594-5aba1c04b4b7.webp");
 const imgPasteYourConten = siteUrl("/assets/figma/7a6d4a9f-d8fa-4622-86ef-7f5c68af7f75.webp");
@@ -82,7 +82,7 @@ export default function Capital() {
             </div>
             <p className="d20" data-node-id="1:6379">
               Приложение существовало несколько лет и за это время собрало лояльную базу — но по визуалу и UX заметно отставало
-              <br aria-hidden />
+              <ResponsiveBreak/>
               от конкурентов
             </p>
           </div>
@@ -96,10 +96,10 @@ export default function Capital() {
             </div>
             <p className="d21" data-node-id="1:6384">
               Трансформировать актив лояльности в актив опыта,
-              <br aria-hidden />
+              <ResponsiveBreak/>
               чтобы повысить LTV существующих клиентов
-              <br aria-hidden />и бизнес мог конкурентоспособно привлекать новую аудиторию. Дополнительно нужно создать адаптивный дизайн под юридические реалии и снизить порог входа
-              <br aria-hidden />
+              <ResponsiveBreak/>и бизнес мог конкурентоспособно привлекать новую аудиторию. Дополнительно нужно создать адаптивный дизайн под юридические реалии и снизить порог входа
+              <ResponsiveBreak/>
               для новичков.
             </p>
           </div>
@@ -133,14 +133,14 @@ export default function Capital() {
             </p>
             <p className="d35" data-node-id="1:6398">
               Большой процент пользователей отваливался на онбординге, из-за его сложности на этапе тестов и длины прохождения,
-              <br aria-hidden />
+              <ResponsiveBreak/>
               от которых нельзя отказаться из-за определенных законов государств.
             </p>
             <p className="d36" data-node-id="1:6399">
               Добавила тестирования
-              <br aria-hidden />
+              <ResponsiveBreak/>
               на знания пользователя, сократив вопросы с 10 до 3, упростив порог входа для новичков
-              <br aria-hidden />
+              <ResponsiveBreak/>
               {`и ускорив вход опытных трейдеров `}
             </p>
             <p className="d37" data-node-id="1:6400">
@@ -158,14 +158,14 @@ export default function Capital() {
             </p>
             <p className="d25" data-node-id="1:6413">
               Так как бизнес хотел расширить целевую аудиторию и охватить новичков
-              <br aria-hidden />в трейдинге, нужно было интегрировать раздел, который способствовал
-              <br aria-hidden />
+              <ResponsiveBreak/>в трейдинге, нужно было интегрировать раздел, который способствовал
+              <ResponsiveBreak/>
               бы обучению пользователей.
             </p>
             <p className="d25" data-node-id="1:6414">
               Я решила, что идеальный вариант - создание нового раздела,
-              <br aria-hidden />с геймификациями, классным и приятным визуалом, это в дальнейшем повлияет
-              <br aria-hidden />
+              <ResponsiveBreak/>с геймификациями, классным и приятным визуалом, это в дальнейшем повлияет
+              <ResponsiveBreak/>
               на метрику удержания.
             </p>
           </div>
@@ -236,8 +236,8 @@ export default function Capital() {
             </div>
             <p className="d60" data-node-id="1:6430">
               Опытные трейдеры отметили, что риск - это совсем не категория интерфейса,
-              <br aria-hidden />а собственная аналитическая работа, новички же предпочитают простые настройки,
-              <br aria-hidden />
+              <ResponsiveBreak/>а собственная аналитическая работа, новички же предпочитают простые настройки,
+              <ResponsiveBreak/>
               где все за них продумано.
             </p>
           </div>
@@ -272,7 +272,7 @@ export default function Capital() {
             </div>
             <p className="d65" data-node-id="1:6453">
               Разработка UI началась с опросов пользователей, которые увидели
-              <br aria-hidden />3 направления
+              <ResponsiveBreak/>3 направления
             </p>
           </div>
           <div className="d66" data-node-id="1:6454">
@@ -365,7 +365,7 @@ export default function Capital() {
                 </div>
                 <p className="d98" data-node-id="1:6499">
                   Работаю на позиции Лида основных
-                  <br aria-hidden />
+                  <ResponsiveBreak/>
                   продуктов компании
                 </p>
               </div>

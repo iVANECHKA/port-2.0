@@ -1,5 +1,5 @@
 import {siteUrl} from '../site-url.js';
-import { Footer, LazyVideo } from '../components.jsx';
+import { Footer, LazyVideo, ResponsiveBreak } from '../components.jsx';
 const img1 = siteUrl("/assets/figma/d5d62026-a7e1-4a7e-9441-9112e6894d01.webp");
 const img12Im1 = siteUrl("/assets/figma/b7464332-8ef0-4654-8ce2-01d6e5f8995c.webp");
 const imgDataEntry1 = siteUrl("/assets/figma/05547647-d2f6-44ad-b3a2-73c260f24bcd.webp");
@@ -74,7 +74,7 @@ export default function Gedo() {
             </div>
             <p className="d65" data-node-id="1:6694">
               Инновационный продукт без прямых конкурентов с голосовым управлением на базе ИИ для планшета, но его пользователи
-              <br aria-hidden />- мужчины 40–60 лет, ориентированы на десктоп, что создаёт главное противоречие
+              <ResponsiveBreak/>- мужчины 40–60 лет, ориентированы на десктоп, что создаёт главное противоречие
             </p>
           </div>
           <div className="d16" data-node-id="1:6695">
@@ -87,7 +87,7 @@ export default function Gedo() {
             </div>
             <p className="d118" data-node-id="1:6699">
               {`Создать продукт который не отвергнут пользователи, продумать работу приложения до мелочей, изменить  пользовательские паттерны, собрать команду`}
-              <br aria-hidden />и построить процессы как внутренние, так и внешние
+              <ResponsiveBreak/>и построить процессы как внутренние, так и внешние
             </p>
           </div>
         </div>
@@ -98,13 +98,13 @@ export default function Gedo() {
             </p>
             <p className="d121" data-node-id="1:6703">
               Мы хотели создать абсолютно новый процесс работы для инженеров - трубопроводчиков, которые могли бы сократить затраченное время за счет работы в приложении сразу
-              <br aria-hidden />
+              <ResponsiveBreak/>
               на объекте, а не после
             </p>
             <p className="d122" data-node-id="1:6704">
               Для дальнейшей работы приняла решение провести 2 основных исследования:
-              <br aria-hidden />- Глубинные интервью с пользователями конкурентов и нашими;
-              <br aria-hidden />– Антропометрические полевые исследования
+              <ResponsiveBreak/>- Глубинные интервью с пользователями конкурентов и нашими;
+              <ResponsiveBreak/>– Антропометрические полевые исследования
             </p>
           </div>
           <div className="d123" data-node-id="1:6705">
@@ -122,9 +122,9 @@ export default function Gedo() {
             </p>
             <p className="d107" data-node-id="1:6718">
               Собрав всю информацию, я вывела несколько гипотез, практически все
-              <br aria-hidden />
+              <ResponsiveBreak/>
               из которых были связаны
-              <br aria-hidden />с упрощением интерфейса
+              <ResponsiveBreak/>с упрощением интерфейса
             </p>
             <p className="d107" data-node-id="1:6719">
               Основная часть функционала была перенесена в боковую панель управления, взаимодействие с которой осуществлялось как ручным вводом, так и голосовым
@@ -219,14 +219,14 @@ export default function Gedo() {
                 </p>
                 <p className="d25" data-node-id="1:6761">
                   System Usability
-                  <br aria-hidden />
+                  <ResponsiveBreak/>
                   Scale
                 </p>
               </div>
             </div>
             <p className="d146" data-node-id="1:6762">
               В результате бизнес запустил инновационный продукт,
-              <br aria-hidden />а также заключил сотрудничество с одной из ТОП 5 нефтегазовых компаний России. Дополнительными достижениями стали получение статуса резидентов Сколково и выход на международный рынок
+              <ResponsiveBreak/>а также заключил сотрудничество с одной из ТОП 5 нефтегазовых компаний России. Дополнительными достижениями стали получение статуса резидентов Сколково и выход на международный рынок
             </p>
           </div>
         </div>
@@ -256,7 +256,7 @@ export default function Gedo() {
                 </div>
                 <p className="d98" data-node-id="1:7426">
                   Работаю на позиции Лида основных
-                  <br aria-hidden />
+                  <ResponsiveBreak/>
                   продуктов компании
                 </p>
               </div>
