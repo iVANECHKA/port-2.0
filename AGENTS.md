@@ -43,3 +43,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Latest mobile gallery correction: Domclick and Capital galleries show 2.5 proportional phone screens. The scroll area extends to the viewport edges, with 16px horizontal and 24px vertical breathing room for complete shadows. Preserve desktop gallery geometry and behavior.
 
 - Publication resumed by explicit owner request after approving the 2.5-screen mobile galleries. Upload the current reviewed local project to Dashixa/port-2.0 and verify its existing GitHub Pages deployment.
+
+## Updates — 25 November 2026
+
+- Contact email in the footer and mobile burger menu is `kormilitsyna.daria01@yandex.com`.
+- Resume PDF supplied by the owner is served at `public/assets/resume.pdf`. The "Резюме" link in both desktop header navigation and the mobile burger menu opens it in a new tab; the former "PDF-резюме скоро появится" placeholder notice is removed.
