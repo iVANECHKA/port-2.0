@@ -48,3 +48,4 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 - Contact email in the footer and mobile burger menu is `kormilitsyna.daria01@yandex.com`.
 - Resume PDF supplied by the owner is served at `public/assets/resume.pdf`. The "Резюме" link in both desktop header navigation and the mobile burger menu opens it in a new tab; the former "PDF-резюме скоро появится" placeholder notice is removed.
+- GitHub Pages workflow `.github/workflows/pages.yml` runs `actions/configure-pages@v5` before `npm run build:pages` and passes `GITHUB_PAGES_BASE: ${{ steps.pages.outputs.base_path }}`, normalized in `vite.config.mjs`, so builds automatically use `/` for custom domains (`dk-lead.tech`) and `/port-2.0/` when no custom domain is attached.
